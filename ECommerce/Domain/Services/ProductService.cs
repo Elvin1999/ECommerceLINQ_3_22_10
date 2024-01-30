@@ -18,6 +18,11 @@ namespace ECommerce.Domain.Services
             _repository = new ProductRepository();
         }
 
+        public void UpdateProduct(Product product)
+        {
+            _repository.UpdateData(product);
+        }
+
         public ObservableCollection<Product> GetFromHigherToLower(bool isLower)
         {
             IOrderedEnumerable<Product> items = null;
